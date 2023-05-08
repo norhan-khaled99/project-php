@@ -1,7 +1,7 @@
 <?php
 $host = 'localhost';
-$username = 'root';
-$password = 'Salama@99';
+$username = 'phpuser';
+$password = 'Iti123456';
 $dbname = 'cafeteria_db';
 
 try {

@@ -1,58 +1,58 @@
 <?php
-// session_start();
-require_once 'includes/header.php';
-require_once 'includes/functions.php';
+include 'includes/DB_class.php';
 
-// Redirect to index page if user is already logged in
+
 if (!empty($_SESSION['user_id'])) {
     header('Location: index.php');
     exit();
 }
 
-// Handle login form submission
 if (!empty($_POST)) {
     $email = $_POST['email'];
     $password = $_POST['password'];
-
-    $user = get_user_by_email($email);
-    if ($user && password_verify($password, $user['password'])) {
-        // Login successful, store user ID in session and redirect to index page
-        $_SESSION['user_id'] = $user['id'];
-        header('Location: index.php');
-        exit();
+    $user =DataBase::get_user_by_email('users',$email);
+    if ($user && $password== $user['password'] ) {
+    $_SESSION['user_id'] = $user['id'];
+            header('Location: index.php');
+    exit();
     } else {
-        // Login failed, show error message
         $error = 'Invalid email or password';
     }
 }
 ?>
-
+<?php
+echo "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp' crossorigin='anonymous'>
+        <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js'></script>
+        <link rel='stylesheet' href='css/login.css'>
+        ";
+        ?>
 <!-- Page content -->
 <div class="container">
-    <h1>Login</h1>
+    <div id='cafe' class='mt-5 text-center text-primary fw-light'>Cafeteria
+        <img  style='width: 110px;' src='images/coffee-logo.png' alt='logo'/>
+    </div>
+    <br>
 
     <?php if (!empty($error)) { ?>
     <div class="alert alert-danger"><?php echo $error; ?></div>
     <?php } ?>
 
-    <form method="post">
-        <div class="form-group">
-            <label>Email</label>
-            <input type="email" name="email" class="form-control" required>
-        </div>
+  <?php 
+   echo "    <div class='container d-flex justify-content-center'>
+            <form class='w-50' action='' method='POST'>
+                <label for='email'  class='form-label'>email</label>
+                <input type='email' name='email' class='form-control' required>
+    <br>
+                <label for='password'  class='form-label'>password</label>
+                <input type='password' name='password' class='form-control' required>
 
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" name="password" class="form-control" required>
-        </div>
+                <div  class='mt-3 text-center'>
+                <button type='submit'  class='btn btn-primary text-center mb-3'>log in</button><br>
+                <a href='forget-password.php?'>forget password?</a>
+                </div>
+                </form>
+                    </div>
 
-        <button type="submit" class="btn btn-primary">Login</button>
-    </form>
-
-    <p>Don't have an account? <a href="register.php">Register here</a></p>
-    <p>Forgot your password? <a href="forgot_password.php">Reset it here</a></p>
-</div>
-
-<?php
-require_once 'includes/footer.php';
-?>
+                    ";
+     ?>

@@ -18,10 +18,10 @@ cursor: pointer;
                     <ul class='navbar-nav '>
 
                         <li class='nav-item mx-5'>
-                            <a href='welcome.php' class='fs-3 ' active>Home</a>
+                            <a href='./index.php' class='fs-3 ' active>Home</a>
                         </li>
                         <li class='nav-item me-5'>
-                            <a class='fs-3'>orders</a>
+                            <a href='../order.php' class='fs-3'>orders</a>
                         </li>
                         <li class='nav-item mx-5'>
                             <a href='logout.php' class='fs-3 ' active>log out</a>

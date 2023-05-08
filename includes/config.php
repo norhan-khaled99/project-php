@@ -1,7 +1,8 @@
 <?php
+
 $host = 'localhost';
-$username = 'phpuser';
-$password = 'Iti123456';
+$username = 'root';
+$password = 'Salama@99';
 $dbname = 'cafeteria_db';
 
 try {
@@ -16,5 +17,3 @@ try {
 } catch(PDOException $e) {
     echo "Error creating database: " . $e->getMessage();
 }
-
-?>

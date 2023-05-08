@@ -1,0 +1,265 @@
+/* Global styles */
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header styles */
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Footer styles */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navigation styles */
+
+nav {
+  background-color: #ccc;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Form styles */
+
+form {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #444;
+}
+
+/* Table styles */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #eee;
+  font-weight: bold;
+}
+
+/* Product card styles */
+
+.product-card {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  overflow: hidden;
+  width: 200px;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+
+.product-card h3 {
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.product-card p {
+  margin: 10px;
+}
+
+.product-card .price {
+  margin: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product-card button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #444;
+}
+
+/* Order summary styles */
+
+.order-summary {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.order-summary h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.order-summary p {
+  margin-bottom: 5px;
+}
+
+.order-summary .item-list {
+  margin-top: 10px;
+}
+
+.order-summary .item-list th {
+  text-align: left;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.order-summary .item-list td {
+  text-align: left;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.order-summary .total {
+  margin-top: 10px;
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Checkout form styles */
+
+.checkout-form {
+  margin-bottom: 20px;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.checkout-form input[type="tel"],
+.checkout-form input[type="password"],
+.checkout-form select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.checkout-form input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.checkout-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.checkout-form button {
+  display: block;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.checkout-form button:hover {
+  background-color: #3e8e41;
+}
+
+/* Form validation error styles */
+
+.error {
+  color: red;
+  margin-top: 5px;
+  font-size: 14px;
+}

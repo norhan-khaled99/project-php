@@ -13,7 +13,12 @@ function is_logged_in()
         return false;
     }
 }
-
+function logout()
+{
+    session_start();
+  unset($_SESSION['user_id']);
+  session_destroy();
+}
 /**
  * Check if the logged in user is an admin
  * @return bool true if the user is an admin, false otherwise
